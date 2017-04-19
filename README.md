@@ -1,2 +1,3 @@
-# multifunctionshield
-Multi Function Shield [UNO] sample code
+# Arduino Multi Function Shield
+- sample code collected from various sources
+- board schematic
