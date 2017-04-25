@@ -47,10 +47,9 @@ void loop()
 {
   /* Read the current position of the 10K potentiometer and use it 
      as a time delay */
-  delay(analogRead(POT_DIO));
+  int analogvalue = analogRead(POT_DIO);
+  delay(analogvalue);
   
-  /* Turn the buzzer on for 20ms and then turn it back off again */
-  digitalWrite(BUZZER_DIO, ON);
-  delay(20);
-  digitalWrite(BUZZER_DIO, OFF);
+  tone(BUZZER_DIO, 1000, analogvalue/2);
+
 }

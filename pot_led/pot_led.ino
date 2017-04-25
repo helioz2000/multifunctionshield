@@ -18,7 +18,7 @@ pinMode(LED[3], OUTPUT);
 void loop()
 {
 int PotValue;
-//Serial.print(“Potentiometer reading: “);
+//Serial.print('Potentiometer reading: ');
 PotValue = analogRead(Pot1);
 /* Wait 0.5 seconds before reading again */
 if(PotValue < 400)
@@ -27,7 +27,7 @@ digitalWrite(LED[0], LOW);
 digitalWrite(LED[1], LOW);
 digitalWrite(LED[2], LOW);
 digitalWrite(LED[3], LOW);
-Serial.print(“Potentiometer: “);
+//Serial.print('Potentiometer: ');
 Serial.println(PotValue);
 }
 else
@@ -36,7 +36,7 @@ digitalWrite(LED[0], HIGH);
 digitalWrite(LED[1], HIGH);
 digitalWrite(LED[2], HIGH);
 digitalWrite(LED[3], HIGH);
-Serial.print(“Potentiometer: “);
+//Serial.print('Potentiometer: ');
 Serial.println(PotValue);
 }
 delay(500);

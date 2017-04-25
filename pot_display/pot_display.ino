@@ -24,13 +24,14 @@ void loop()
 {
 int PotValue;
 PotValue = analogRead(Pot1);
-Serial.print(“Potentiometer: “);
-Serial.println(PotValue);
+//Serial.print("Potentiometer: ");
+//Serial.println(PotValue);
 /* Update the display with the current counter value */
 WriteNumberToSegment(0 , PotValue / 1000);
 WriteNumberToSegment(1 , (PotValue / 100) % 10);
 WriteNumberToSegment(2 , (PotValue / 10) % 10);
 WriteNumberToSegment(3 , PotValue % 10);
+
 }
 
 /* Write a decimal number between 0 and 9 to one of the 4 digits of the display */

@@ -36,24 +36,33 @@ REASON WHATSOEVER.
 #define BUTTON2 A2
 #define BUTTON3 A3
 
+#define BUZZER_DIO 3
+
 void setup()
 {
-  Serial.begin(9600); 
+  Serial.begin(9600);
+  pinMode(BUZZER_DIO, OUTPUT);
 }
 
 /* Main program */
 void loop()
 {
   /* Has button one been pressed? */
-  if(!digitalRead(BUTTON1))
+  if(!digitalRead(BUTTON1)) {
+    tone(BUZZER_DIO, 1000, 150);
     /* If so then send a message to the serial port */
     Serial.println("Button 1 Pressed!");
+  }  
   /* Has button two been pressed? */
-  if(!digitalRead(BUTTON2))
+  if(!digitalRead(BUTTON2)) {
+    tone(BUZZER_DIO, 1500, 150);
     /* If so then send a message to the serial port */
     Serial.println("Button 2 Pressed!");
+  }
   /* Has button three been pressed? */
-  if(!digitalRead(BUTTON3))
+  if(!digitalRead(BUTTON3)) {
+    tone(BUZZER_DIO, 2000, 150);
     /* If so then send a message to the serial port */
     Serial.println("Button 3 Pressed!");
+  }
 }
